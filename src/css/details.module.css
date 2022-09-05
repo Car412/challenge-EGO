@@ -1,0 +1,42 @@
+.container{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-column-gap: 100px;
+    grid-row-gap: 0px;
+}
+
+.h3{
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--gray);
+    align-self: flex-end;
+}
+
+.h1{
+    grid-area: 2 / 2 / 3 / 3;
+    font-size: 50px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.img{
+    width: 560px;
+    height: 400px;
+    object-fit: contain;
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+.p{
+    grid-area: 3 / 2 / 4 / 3;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: -0.1px;
+    color: var(--gray);
+    margin-top: -20px;
+}

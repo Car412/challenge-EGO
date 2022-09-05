@@ -1,0 +1,41 @@
+.nav{
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: #CCCCCC;   
+}
+
+.div{
+    width: 126px;
+    height: 70px;
+    text-align: center;    
+}
+
+.link{
+    text-decoration: none;
+}
+
+.p{
+    font-size: 14px;
+    line-height: 17.07px;
+    font-weight: 600;
+    align-items:flex-start;
+    vertical-align: top;
+    color: #191919;
+    margin-top: 35px;
+    cursor: pointer;
+    margin-left: 30px;
+    
+}
+
+.p:active{
+    color: #EB0A1E;
+}
+
+.logo{
+    width: 37.54px;
+    height: 37.54px;
+    margin-left: 15px;
+    margin-top: 16.85px;
+}
