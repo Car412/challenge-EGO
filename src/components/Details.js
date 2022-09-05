@@ -36,28 +36,25 @@ export default function Details() {
           </div>
         )}
         <div className={styles.containerFeatures}>
-        {
-          modelDetail && modelDetail.model_features.map(el=>(
-            <div>
-              <img src={el.image} alt="" />
-              <h3 className={styles.h3Feat}>{el.name}</h3>
-              <p className={styles.pFeat}>{el.description}</p>
-            </div>
-          ))
-        }
+          {modelDetail &&
+            modelDetail.model_features.map((el) => (
+              <div>
+                <img src={el.image} alt="" />
+                <h3 className={styles.h3Feat}>{el.name}</h3>
+                <p className={styles.pFeat}>{el.description}</p>
+              </div>
+            ))}
         </div>
-        <div  className={styles.containerHighlights}  >
-        {
-          modelDetail && modelDetail.model_highlights.map(el=>(
-            <div className={styles.divHighlights}>
-              <img src={el.image} alt="" className={styles.imgHigh}/>
-              <h3 className={styles.h3High}>{el.title}</h3>
-              <p className={styles.pHigh}>{el.content.substring(26, 213)}</p>
-            </div>
-          ))
-        }
+        <div className={styles.containerHighlights}>
+          {modelDetail &&
+            modelDetail.model_highlights.map((el) => (
+              <div className={styles.divHighlights}>
+                <img src={el.image} alt="" className={styles.imgHigh} />
+                <h3 className={styles.h3High}>{el.title}</h3>
+                <p className={styles.pHigh}>{el.content.substring(26, 213)}</p>
+              </div>
+            ))}
         </div>
-       
       </div>
       <Footer />
     </div>

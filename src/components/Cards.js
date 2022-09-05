@@ -20,7 +20,7 @@ export default function Cards() {
   const [menuFilter, setMenuFilter] = useState(false);
 
   function handleSort(e) {
-    dispatch(orderModels(e));
+    dispatch(orderModels(e.target.value));
     setOrden(e);
   }
 
@@ -80,23 +80,26 @@ export default function Cards() {
             </div>
           )}
         </div>
-        <div
-          className={styles.orden}
-          onClick={() => setMenuOrder(!menuOrder)}
-        >
+        <div className={styles.orden} onClick={() => setMenuOrder(!menuOrder)}>
           <p className={styles.pOrderBy}>Ordenar por </p>
 
-          {menuOrder && (
-            <div>
-              <select onChange={(e)=> handleSort(e)} className={styles.select}>
+          <div>
+            <select onChange={(e) => handleSort(e)} className={styles.select}>
               <option value="Nada">Nada</option>
-              <option value="Mayor Precio">De <strong>mayor</strong> a <strong>menor</strong> precio</option>
-              <option value="Menor precio">De <strong>menor</strong> a <strong>mayor</strong> precio</option>
-              <option value="Mas nuevos primero">Más <strong>nuevos</strong> primero</option>
-              <option value="mas viejos primero">Más <strong>viejos</strong> primero</option>
-              </select>              
-            </div>         
-          )}
+              <option value="Mayor Precio">
+                De <strong>mayor</strong> a <strong>menor</strong> precio
+              </option>
+              <option value="Menor precio">
+                De <strong>menor</strong> a <strong>mayor</strong> precio
+              </option>
+              <option value="Mas nuevos primero">
+                Más <strong>nuevos</strong> primero
+              </option>
+              <option value="mas viejos primero">
+                Más <strong>viejos</strong> primero
+              </option>
+            </select>
+          </div>
         </div>
       </div>
       <div className={styles.divCard}>
