@@ -9,6 +9,9 @@ import {
 const initialState = {
   models: [],
   allModels: [],
+  modelsInstance: [],
+  modelsFeatures: [],
+  modelHighlights: [],
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -75,6 +78,7 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         models: suvs,
       };
+    
 
     default:
       return state;

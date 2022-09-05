@@ -1,3 +1,4 @@
+
 .container{
     margin-right: 10%;
     margin-left: 10%;
@@ -13,7 +14,7 @@
     grid-area: 1 / 2 / 2 / 3;
     font-size: 20px;
     font-weight: 600;
-    color: var(--gray);
+    color: #373737;
     align-self: flex-end;
 }
 
@@ -21,7 +22,7 @@
     grid-area: 2 / 2 / 3 / 3;
     font-size: 50px;
     font-weight: 600;
-    color: var(--gray);
+    color: #373737;
 }
 
 .img{
@@ -31,12 +32,80 @@
     grid-area: 1 / 1 / 4 / 2;
 }
 
-.p{
-    grid-area: 3 / 2 / 4 / 3;
+.containerFeatures{
+    background-color: #F7F7F7;
+    margin-right: 10%;
+    margin-left: 10%;
+    height: 410px;
+    position: relative;  
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.h3Feat{
+    font-size: 20px;
+    font-weight: 600;
+    color: #373737;
+    line-height: 27px;
+    letter-spacing: -0.4px;
+    max-width: 270px;
+}
+
+.pFeat{
+    font-size: 16px;
+    font-weight: 400;
+    color: #373737;
+    line-height: 27px;
+    letter-spacing: -0.1px;
+    align-self: flex-end;
+    position: absolute;
+}
+
+.containerHighlights{
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(autofill);
+    grid-row-gap: 80px;
+}
+
+.divHighlights{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-items: center;
+}
+
+.imgHigh{
+    max-width: 560px;
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.h3High{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 27px;
+    letter-spacing: -0.4px;
+    color: #373737;
+}
+
+.pHigh{
     font-size: 16px;
     font-weight: 400;
     line-height: 27px;
     letter-spacing: -0.1px;
-    color: var(--gray);
-    margin-top: -20px;
+    color: #373737;
+    margin-top: 13px;
 }
+
+
