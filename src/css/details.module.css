@@ -32,37 +32,6 @@
     grid-area: 1 / 1 / 4 / 2;
 }
 
-.containerFeatures{
-    background-color: #F7F7F7;
-    margin-right: 10%;
-    margin-left: 10%;
-    height: 410px;
-    position: relative;  
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.h3Feat{
-    font-size: 20px;
-    font-weight: 600;
-    color: #373737;
-    line-height: 27px;
-    letter-spacing: -0.4px;
-    max-width: 270px;
-}
-
-.pFeat{
-    font-size: 16px;
-    font-weight: 400;
-    color: #373737;
-    line-height: 27px;
-    letter-spacing: -0.1px;
-    align-self: flex-end;
-    position: absolute;
-}
-
 .containerHighlights{
     margin-right: 10%;
     margin-left: 10%;

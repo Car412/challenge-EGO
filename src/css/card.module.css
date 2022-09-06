@@ -55,7 +55,12 @@
 
 .link{
     text-decoration: none;
-    align-self: center;
+}
+
+@media only screen and (max-width: 910px) {
+    .linkImg{
+        display: block;
+    }
 }
 
 

@@ -1,6 +1,7 @@
 import {Switch, Route} from "react-router-dom";
 import Home from "./components/Home";
 import Detail from "./components/Details";
+import "./estilos.css";
 
 function App() {
   return (

@@ -3,8 +3,14 @@
     line-height: 57px;
     letter-spacing: -1px;
     margin-left: 10%;
-    color: var(--gray);
+    color: #373737;
     margin-top: 85px;
     margin-bottom: 72px;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 910px) {
+    .title h1{
+        font-size: 35px;
+    }
 }

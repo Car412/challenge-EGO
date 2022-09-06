@@ -1,9 +1,12 @@
 .nav{
-    position: relative;
-    height: 60px;
+    position: relative;       
+}
+
+.divNav{
+    height: 70px;
     display: flex;
     align-items: center;
-    border-bottom: #CCCCCC;   
+    border-bottom: 1px solid #CCCCCC;
 }
 
 .div{
@@ -18,19 +21,10 @@
 
 .p{
     font-size: 14px;
-    line-height: 17.07px;
     font-weight: 600;
-    align-items:flex-start;
-    vertical-align: top;
     color: #191919;
-    margin-top: 35px;
-    cursor: pointer;
-    margin-left: 30px;
+    margin-top: 27px;
     
-}
-
-.p:active{
-    color: #EB0A1E;
 }
 
 .logo{
@@ -38,4 +32,16 @@
     height: 37.54px;
     margin-left: 15px;
     margin-top: 16.85px;
+}
+
+.on{
+    width: 126px;
+    height: 70px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 910px) {
+    .select{
+        display: none;
+    }
 }
