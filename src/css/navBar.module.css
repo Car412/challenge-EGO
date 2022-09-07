@@ -1,47 +1,31 @@
-.nav{
-    position: relative;       
+nav{
+    position: relative;
 }
-
-.divNav{
+nav .nav{
     height: 70px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #CCCCCC;
+    border-bottom: 1px solid #373737;
 }
-
-.div{
-    width: 126px;
-    height: 70px;
-    text-align: center;    
+nav .nav figure{
+    width: 115px;
+    margin: 0;
+    margin-left: 35px;
 }
-
-.link{
-    text-decoration: none;
-}
-
-.p{
-    font-size: 14px;
-    font-weight: 600;
-    color: #191919;
-    margin-top: 27px;
-    
-}
-
-.logo{
-    width: 37.54px;
-    height: 37.54px;
-    margin-left: 15px;
-    margin-top: 16.85px;
-}
-
-.on{
+nav .nav .active{
     width: 126px;
     height: 70px;
     text-align: center;
 }
+nav .nav .active p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #373737;
+    margin-top: 27px;
+}
 
 @media only screen and (max-width: 910px) {
-    .select{
+    .active{
         display: none;
     }
 }

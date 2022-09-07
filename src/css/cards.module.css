@@ -41,7 +41,7 @@
     outline: none;
 }
 .filtros .filters:hover{
-    background-color: var(--white);
+    background-color: white;
     padding: 9px 18px;
     border-radius: 30px;
 }
@@ -58,7 +58,8 @@
     line-height: 14px;
     letter-spacing: 0.08px;
     font-weight: 600;
-    color: var(--gray);
+    color: #373737;
+    
 }
 .filtrosResponsive img, .filtrosResponsive img{
     width: 10px;
@@ -163,7 +164,7 @@
 } 
 
 @media only screen and (max-width: 1400px) {
-    .container{
+    .cards{
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -185,7 +186,7 @@
     .filtrosResponsive{
         display: flex;
     }
-    .divOrden{
+    .divOrden {
         right: -27px;
     }
 }

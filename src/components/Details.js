@@ -27,13 +27,12 @@ export default function Details() {
       <div>
         {modelDetail && (
           <div className={styles.container}>
-            <h3 className={styles.h3}>{modelDetail.name}</h3>
-            <h1 className={styles.h1}>{modelDetail.title}</h1>
+            <h3>{modelDetail.name}</h3>
+            <h1>{modelDetail.title}</h1>
             <p>{modelDetail.description}</p>
             <img
               src={modelDetail.photo}
               alt={modelDetail.name}
-              className={styles.img}
             />
           </div>
         )}
@@ -43,7 +42,7 @@ export default function Details() {
         {modelDetail &&
           modelDetail.model_features.map((el) => (
             <Slides>
-              <img src={el.image} alt="" />
+              <img src={el.image} alt=""/>
               <TextoSlide nombre>
                 <h3>{el.name}</h3>
               </TextoSlide>
@@ -69,10 +68,12 @@ export default function Details() {
         <div className={styles.containerHighlights}>
           {modelDetail &&
             modelDetail.model_highlights.map((el) => (
-              <div className={styles.divHighlights}>
-                <img src={el.image} alt="" className={styles.imgHigh} />
-                <h3 className={styles.h3High}>{el.title}</h3>
-                <p className={styles.pHigh}>{el.content}</p>
+              <div className={styles.divHighlights}  key={el.title}>
+                <img src={el.image} alt=""/>
+                <div>
+                <h3>{el.title}</h3>
+                <p>{el.content}</p>
+                </div>
               </div>
             ))}
         </div>
@@ -81,6 +82,8 @@ export default function Details() {
     </div>
   );
 }
+
+/* Slider con styled */
 
 const ContenedorPrincipal = styled.div`
   position: relative;

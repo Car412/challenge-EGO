@@ -5,7 +5,7 @@
   align-self: center;
 }
 
-.h1 {
+.card h1 {
   font-size: 28px;
   font-weight: 600;
   line-height: 30px;
@@ -13,11 +13,11 @@
   letter-spacing: -0.65 px;
   color: black;
 }
-.h1:hover {
+.card .h1:hover {
   color: #eb0a1e;
 }
 
-.h3 {
+.card h3 {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.28px;
@@ -25,7 +25,7 @@
   color: #191919;
 }
 
-.img {
+.card img {
   width: 268px;
   height: 132px;
   object-fit: cover;
@@ -37,7 +37,7 @@
   align-self: center;
 }
 
-.button {
+.divButton button {
   width: 152px;
   padding: 7px 0px;
   border-radius: 18px;
@@ -58,8 +58,4 @@
   text-decoration: none;
 }
 
-@media only screen and (max-width: 910px) {
-  .linkImg {
-    display: block;
-  }
-}
+

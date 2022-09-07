@@ -5,14 +5,14 @@ import { Link } from "react-router-dom";
 export default function Card({ id, name, price, year, photo }) {
   return (
     <div className={styles.card}>
-      <h1 className={styles.h1}>{name}</h1>
-      <h3 className={styles.h3}>
+      <h1>{name}</h1>
+      <h3>
         {year} | ${price}
       </h3>
-      <img src={photo} alt={name} className={styles.img} />
+      <img src={photo} alt={name}/>
       <div className={styles.divButton}>
         <Link to={`/detail?id=${id}`} className={styles.link}>
-          <button className={styles.button}>Ver Modelo</button>
+          <button>Ver Modelo</button>
         </Link>
       </div>
     </div>

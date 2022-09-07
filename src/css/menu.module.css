@@ -11,9 +11,11 @@
     font-size: 14px;
     font-weight: 400;
     color: #191919;
-    margin-top: 27px;
     margin-right: 7px;
     letter-spacing: normal;
+    line-height: 17px;
+    vertical-align: top;
+    margin-top: 14px;
 }
 
 .img{
@@ -54,8 +56,8 @@
     align-self: flex-end;
     color: #000000;
     line-height: 17.07px;
-    margin-bottom: 19px;
     margin-right: 7px;
+    margin-top: 0px;
 }
 
 .imgClose{

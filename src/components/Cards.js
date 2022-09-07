@@ -83,43 +83,70 @@ export default function Cards() {
         </div>
         <div className={styles.orden} onClick={() => setMenuOrder(!menuOrder)}>
           <p className={styles.pOrden}>Ordenar por</p>
-            {
-              menuOrder &&
-              <div className={styles.divOrden}>
-                <button
-                  value='none'
-                  style={{backgroundColor: orden === 'none' ? 'rgba(209, 214, 214, 0.2)' : null }}
-                  onClick={() => handleSort('none')}
-                >
-                  Nada
-                </button>
-                <button
-                  value="Mayor precio"
-                  style={{ backgroundColor: orden === "Mayor precio" ? 'rgba(209, 214, 214, 0.2)' : null }}
-                  onClick={() => handleSort("Mayor precio")}>
-                  De <strong>menor</strong> a <strong>mayor</strong> precio
-                </button>
-                <button
-                  value="Menor precio"
-                  style={{ backgroundColor: orden === "Menor precio" ? 'rgba(209, 214, 214, 0.2)' : null }}
-                  onClick={() => handleSort("Menor precio")}>
-                  De <strong>mayor</strong> a <strong>menor</strong> precio
-                </button>
-                <button
-                  value="Mas nuevos primero"
-                  style={{ backgroundColor: orden === "Mas nuevos primero" ? 'rgba(209, 214, 214, 0.2)' : null }}
-                  onClick={() => handleSort("Mas nuevos primero")}>
-                  Más <strong>nuevos</strong> primero
-                </button>
-                <button
-                  value="Mas viejos primero"
-                  className='lastbtn'
-                  style={{ backgroundColor: orden === "Mas viejos primero" ? 'rgba(209, 214, 214, 0.2)' : null }}
-                  onClick={() => handleSort("Mas viejos primero")}>
-                  Más <strong>viejos</strong> primero
-                </button>
-              </div>
-            }
+          {menuOrder && (
+            <div className={styles.divOrden}>
+              <button
+                value="Nada"
+                style={{
+                  backgroundColor:
+                    orden === "Nada" ? "#D1D6D6 20.22%" : null,
+                    
+                }}
+                onClick={() => handleSort("Nada")}
+              >
+                Nada
+              </button>
+              <button
+                value="Mayor precio"
+                style={{
+                  backgroundColor:
+                    orden === "Mayor precio"
+                      ? "#D1D6D6 20.22%"
+                      : null,
+                }}
+                onClick={() => handleSort("Mayor precio")}
+              >
+                De <strong>menor</strong> a <strong>mayor</strong> precio
+              </button>
+              <button
+                value="Menor precio"
+                style={{
+                  backgroundColor:
+                    orden === "Menor precio"
+                      ? "#D1D6D6 20.22%"
+                      : null,
+                }}
+                onClick={() => handleSort("Menor precio")}
+              >
+                De <strong>mayor</strong> a <strong>menor</strong> precio
+              </button>
+              <button
+                value="Mas nuevos primero"
+                style={{
+                  backgroundColor:
+                    orden === "Mas nuevos primero"
+                      ? "#D1D6D6 20.22%"
+                      : null,
+                }}
+                onClick={() => handleSort("Mas nuevos primero")}
+              >
+                Más <strong>nuevos</strong> primero
+              </button>
+              <button
+                value="Mas viejos primero"
+                className="lastbtn"
+                style={{
+                  backgroundColor:
+                    orden === "Mas viejos primero"
+                      ? "#D1D6D6 20.22%"
+                      : null,
+                }}
+                onClick={() => handleSort("Mas viejos primero")}
+              >
+                Más <strong>viejos</strong> primero
+              </button>
+            </div>
+          )}
         </div>
       </div>
       <div className={styles.divCard}>

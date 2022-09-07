@@ -19,5 +19,4 @@ height: 50px;
             display: block;
         }
     }
-
 `;
