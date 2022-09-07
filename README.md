@@ -5,3 +5,5 @@ Pasos para levantar el proyecto localmente:
           - npm install
           -Luego npm start
 - El proyecto comenzará a correr en el puerto 3000
+
+Link del deploy --> challenge-ego-car412.vercel.app
