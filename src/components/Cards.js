@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
+
 import {
   getModels,
   orderModels,
@@ -14,13 +15,13 @@ export default function Cards() {
   const dispatch = useDispatch();
   const allModels = useSelector((state) => state.models);
 
-  const [orden, setOrden] = useState(""); // eslint-disable-next-line
-  const [filter, setFilter] = useState(""); // eslint-disable-next-line
+  const [orden, setOrden] = useState("");
+  const [filter, setFilter] = useState("");
   const [menuOrder, setMenuOrder] = useState(false);
   const [menuFilter, setMenuFilter] = useState(false);
 
   function handleSort(e) {
-    dispatch(orderModels(e.target.value));
+    dispatch(orderModels(e));
     setOrden(e);
   }
 
@@ -52,16 +53,16 @@ export default function Cards() {
       <div className={styles.borde}>
         <div className={styles.filtros}>
           <p className={styles.p}>Filtrar por</p>
-          <button className={styles.button} onClick={handleReset}>
+          <button className={styles.filters} onClick={handleReset}>
             Todos
           </button>
-          <button className={styles.button} onClick={filterSedanHatchback}>
+          <button className={styles.filters} onClick={filterSedanHatchback}>
             Autos
           </button>
-          <button className={styles.button} onClick={filterPickups}>
+          <button className={styles.filters} onClick={filterPickups}>
             Pickups y Comerciales
           </button>
-          <button className={styles.button} onClick={filterSuvs}>
+          <button className={styles.filters} onClick={filterSuvs}>
             SUVs y Crossovers
           </button>
         </div>
@@ -81,25 +82,44 @@ export default function Cards() {
           )}
         </div>
         <div className={styles.orden} onClick={() => setMenuOrder(!menuOrder)}>
-          <p className={styles.pOrderBy}>Ordenar por </p>
-
-          <div>
-            <select onChange={(e) => handleSort(e)} className={styles.select}>
-              <option value="Nada">Nada</option>
-              <option value="Mayor Precio">
-                De <strong>mayor</strong> a <strong>menor</strong> precio
-              </option>
-              <option value="Menor precio">
-                De <strong>menor</strong> a <strong>mayor</strong> precio
-              </option>
-              <option value="Mas nuevos primero">
-                Más <strong>nuevos</strong> primero
-              </option>
-              <option value="mas viejos primero">
-                Más <strong>viejos</strong> primero
-              </option>
-            </select>
-          </div>
+          <p className={styles.pOrden}>Ordenar por</p>
+            {
+              menuOrder &&
+              <div className={styles.divOrden}>
+                <button
+                  value='none'
+                  style={{backgroundColor: orden === 'none' ? 'rgba(209, 214, 214, 0.2)' : null }}
+                  onClick={() => handleSort('none')}
+                >
+                  Nada
+                </button>
+                <button
+                  value="Mayor precio"
+                  style={{ backgroundColor: orden === "Mayor precio" ? 'rgba(209, 214, 214, 0.2)' : null }}
+                  onClick={() => handleSort("Mayor precio")}>
+                  De <strong>menor</strong> a <strong>mayor</strong> precio
+                </button>
+                <button
+                  value="Menor precio"
+                  style={{ backgroundColor: orden === "Menor precio" ? 'rgba(209, 214, 214, 0.2)' : null }}
+                  onClick={() => handleSort("Menor precio")}>
+                  De <strong>mayor</strong> a <strong>menor</strong> precio
+                </button>
+                <button
+                  value="Mas nuevos primero"
+                  style={{ backgroundColor: orden === "Mas nuevos primero" ? 'rgba(209, 214, 214, 0.2)' : null }}
+                  onClick={() => handleSort("Mas nuevos primero")}>
+                  Más <strong>nuevos</strong> primero
+                </button>
+                <button
+                  value="Mas viejos primero"
+                  className='lastbtn'
+                  style={{ backgroundColor: orden === "Mas viejos primero" ? 'rgba(209, 214, 214, 0.2)' : null }}
+                  onClick={() => handleSort("Mas viejos primero")}>
+                  Más <strong>viejos</strong> primero
+                </button>
+              </div>
+            }
         </div>
       </div>
       <div className={styles.divCard}>

@@ -3,6 +3,7 @@ import egoLogo from "../logo/egoLogo.png";
 import { Link, useLocation} from "react-router-dom";
 import styles from "../css/navBar.module.css";
 import Menu from "./Menu";
+import styled from "styled-components";
 
 
 
@@ -13,7 +14,7 @@ export default function NavBar({id}) {
 
   return (
     <div>
-      <nav className={styles.nav}>
+      <Nav>
         <div className={styles.divNav}>
           <Link to="/" className={styles.link}>
             <img src={egoLogo} alt="" className={styles.logo} />
@@ -29,7 +30,16 @@ export default function NavBar({id}) {
           </div>
           <Menu />
         </div>
-      </nav>
+      </Nav>
     </div>
   );
 }
+
+const Nav = styled.nav`
+position: relative;
+@media only screen and (max-width: 910px) {
+  .linkImg{
+      display: block;
+  }
+}
+`

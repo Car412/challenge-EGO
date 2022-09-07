@@ -7,7 +7,7 @@ export default function Card({ id, name, price, year, photo }) {
     <div className={styles.card}>
       <h1 className={styles.h1}>{name}</h1>
       <h3 className={styles.h3}>
-        {year} | {price}
+        {year} | ${price}
       </h3>
       <img src={photo} alt={name} className={styles.img} />
       <div className={styles.divButton}>

@@ -4,26 +4,33 @@
     margin-top: 55px;
     padding-bottom: 100px;
 }
-
-.borde{
-    border-bottom: 1px solid  #D8D8D8;
+.divCard{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 26px;
+    grid-row-gap: 26px;
+    justify-items: center;
 }
-
+.card{
+    margin-top: 55px;
+}
+.borde{
+    border-bottom: 1px solid #D8D8D8;   
+}
+/* FILTROS */
 .filtros{
     display: flex;
 }
-
-.p{
+.filtros .p{
     font-size: 14px;
     font-weight: 600;
     margin-right: 50px;
     padding-top: 9px;
     padding-bottom: 9px;
     margin-bottom: 0;
-    color: #373737;    
 }
-
-.button{
+.filtros .filters{
     font-size: 14px;
     font-weight: 400;
     margin-right: 50px;
@@ -32,17 +39,13 @@
     border: none;
     background-color: transparent;
     outline: none;
-    cursor: pointer;
 }
-
-.button:hover{
-    background-color: #F7F7F7;
+.filtros .filters:hover{
+    background-color: var(--white);
     padding: 9px 18px;
     border-radius: 30px;
-
 }
-
-.filtrosResponsive{
+.filtrosResponsive {
     display: none;
     align-items: center;
     cursor: pointer;
@@ -50,16 +53,22 @@
     padding-right: 10px;
     z-index: 2;
 }
-
-.pResponsive {
+.pResponsive{
     font-size: 14px;
     line-height: 14px;
     letter-spacing: 0.08px;
     font-weight: 600;
-    color: #373737;
+    color: var(--gray);
 }
-
-.div{
+.filtrosResponsive img, .filtrosResponsive img{
+    width: 10px;
+    margin-top: -15px;
+    margin-left: 7px;
+}
+.filtrosResponsive .down, .filtrosResponsive .down{
+    transform: rotate(180deg);
+}
+.divFilterAct {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -70,8 +79,32 @@
     left: -27px;
     box-shadow: 2px 2px 20px 0px rgba(0,0, 0, 0.1);
 }
+.divFilterAct button {
+    width: 170px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+    letter-spacing: -0.1px;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 15px;
+    background-color: transparent;
+}
+.divFilterAct .lastbtn{
+    border-bottom: none;
+} 
+.divFilterAct button:hover {
+    background-color: rgba(209, 214, 214, 0.2);
+}
+.divFilterAct .lastbtn:hover{
+    border-radius: 8px;
+} 
 
-.orden{
+/* ORDEN */
+.orden {
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -79,8 +112,22 @@
     padding-right: 10px;
     z-index: 2;
 }
-
-.select{
+.pOrden{
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.08px;
+    font-weight: 600;
+    color: var(--gray);
+}
+.orden img, .filtrosResponsive img{
+    width: 10px;
+    margin-top: -15px;
+    margin-left: 7px;
+}
+.orden .down, .filtrosResponsive .down{
+    transform: rotate(180deg);
+}
+.divOrden {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -91,44 +138,54 @@
     right: 10px;
     box-shadow: 2px 2px 20px 0px rgba(0,0, 0, 0.1);
 }
-
-.divCard{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
-    grid-template-rows: auto;
-    grid-column-gap: 26px;
-    grid-row-gap: 26px;
-    justify-items: center;
+.divOrden button {
+    width: 170px;
+    height: 35px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+    letter-spacing: -0.1px;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: left;
+    cursor: pointer;
+    padding-left: 15px;
+    background-color: transparent;
 }
-
-.card {
-    margin-top: 55px;
+.divOrden .lastbtn{
+    border-bottom: none;
+} 
+.divOrden button:hover {
+    background-color: rgba(209, 214, 214, 0.2);
 }
+.divOrden .lastbtn:hover{
+    border-radius: 8px;
+} 
 
 @media only screen and (max-width: 1400px) {
-    .cards{
+    .container{
         margin-left: 5%;
         margin-right: 5%;
     }
 }
 @media only screen and (max-width: 1200px) {
-    .filterWeb .filters{
+    .filtros .filters{
         margin-right: 30px;
     }
 }
 @media only screen and (max-width: 1000px) {
-    .filterWeb .filters{
+    .filtros .filters{
         margin-right: 8px;
     }
 }
 @media only screen and (max-width: 910px) {
-    .filterWeb{
+    .filtros{
         display: none;
     }
-    .filterMobile{
+    .filtrosResponsive{
         display: flex;
     }
-    .divOrderAct{
+    .divOrden{
         right: -27px;
     }
 }

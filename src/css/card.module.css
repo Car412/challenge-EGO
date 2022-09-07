@@ -1,67 +1,65 @@
-.card{
-    width: 268px;
-    height: 185px;
-    border: none;
+.card {
+  width: 268px;
+  height: 185px;
+  border: none;
+  align-self: center;
 }
 
-.h1{
-    font-size: 28px;
-    font-weight: 600;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing:-0.65 px ;
-    color: black;    
+.h1 {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.65 px;
+  color: black;
 }
-.h1:hover{
-    color: #EB0A1E;
-}
-
-.h3{
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: -0.28px;
-    text-align: center;
-    color: #191919;
+.h1:hover {
+  color: #eb0a1e;
 }
 
-.img{
-    width: 268px;
-    height: 132px;
-    object-fit: cover;    
+.h3 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.28px;
+  text-align: center;
+  color: #191919;
 }
 
-.divButton{
-    width: 152px;
-    border-radius: 18px;
-    align-self: center;
+.img {
+  width: 268px;
+  height: 132px;
+  object-fit: cover;
 }
 
-.button{
-    width: 152px;
-    padding: 7px 0px;
-    border-radius: 18px;
-    font-size: 13px;
-    align-self: center;
-    border: none;
-    background-color: #191919;
-    color: #FFFFFF;
-    display: none;
-    cursor:pointer;
+.divButton {
+  width: 152px;
+  border-radius: 18px;
+  align-self: center;
 }
 
-.card:hover button{
-    display: block;
+.button {
+  width: 152px;
+  padding: 7px 0px;
+  border-radius: 18px;
+  font-size: 13px;
+  align-self: center;
+  border: none;
+  background-color: #191919;
+  color: #ffffff;
+  display: none;
+  cursor: pointer;
 }
 
-.link{
-    text-decoration: none;
+.card:hover button {
+  display: block;
+}
+
+.link {
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 910px) {
-    .linkImg{
-        display: block;
-    }
+  .linkImg {
+    display: block;
+  }
 }
-
-
-
